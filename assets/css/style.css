@@ -1,0 +1,47 @@
+:root {
+--font-main: 'Montserrat', sans-serif;
+--font-code: 'Inconsolata', monospace;
+--black: #021C1D;
+--dark-orange:#FA8130;
+--light-orange:#FAAE08;
+--blue:#64FFDA;
+--white:#FDF1E1;
+}
+
+body {
+    background-color: var(--black);
+}
+
+header {
+    background-color: var(--dark-orange);
+}
+
+header h1 {
+    font-family: var(--font-main);
+    font-size: 150%;
+    text-align: left;
+    padding: 25px;
+}
+
+nav {
+   background-color: var(--light-orange); 
+   color: var(--black);
+   display: flex;
+   justify-content: space-between;
+   font-family: var(--font-main);
+   font-size: 100%;
+   width: 50%;
+   position: relative;
+   margin-bottom: -50px;
+}
+
+.dot {
+    background-color: var(--blue);
+    display: inline;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    position: relative;
+    margin: 5px;
+}
+
