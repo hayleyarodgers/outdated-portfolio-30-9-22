@@ -12,13 +12,27 @@ body {
     background-color: var(--black);
 }
 
+.font-code {
+    font-family: var(--font-code);
+    font-size: 160%;
+    color: var(--blue);
+}
+
+.font-main-light {
+    font-style: var(--font-main);
+    font-size: 160%;
+    font-weight: 200;
+    color: var(--white);
+    line-height: 1.5;
+}
+
 header {
     background-color: var(--dark-orange);
 }
 
 header h1 {
     font-family: var(--font-main);
-    font-size: 150%;
+    font-size: 200%;
     text-align: left;
     padding: 20px;
 }
@@ -28,9 +42,11 @@ nav {
    color: var(--black);
    font-family: var(--font-main);
    font-weight: 700;
-   font-size: 100%;
+   font-size: 150%;
    width: 50%;
    float: right;
+   position: relative;
+   margin-top: -20px;
 }
 
 nav ul {
@@ -44,13 +60,50 @@ nav li {
 
 nav a {
     text-decoration: none;
+    color: var(--black);
 }
 
 .dot {
     background-color: var(--blue);
-    height: 25px;
-    width: 25px;
+    height: 28px;
+    width: 28px;
     border-radius: 50%;
-    margin: 15px;
+    margin: 7px;
 }
 
+.dot-group {
+    display: flex;
+    position: relative;
+    top: 15px;
+    left: 370px;
+}
+
+main {
+    margin-left: 150px;
+}
+
+.hero {
+    margin-top: 120px;
+    display: flex;
+    align-items: center;
+}
+
+.hero h2 {
+    color: var(--white);
+    font-family: var(--font-main);
+    font-style: 700;
+    font-size: 400%;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.hero p {
+    width: 70%;
+}
+
+img {
+    width: 450px;
+    margin-right: 150px;
+    border-radius: 50%;
+    box-shadow: 15px 10px 15px var(--dark-orange);
+}
