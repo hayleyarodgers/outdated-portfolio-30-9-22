@@ -44,6 +44,15 @@ h4 {
     margin-bottom: 10px;
 }
 
+h5 {
+    color: var(--white);
+    font-family: var(--font-main);
+    font-style: 700;
+    font-size: 100%;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
 hr {
     border: 1px solid var(--blue);
     width: 16vw;
@@ -138,7 +147,6 @@ figure img {
     align-items: center; 
 }
 
-
 .pop-box {
     background-color: var(--blue);
     padding: 20px;
@@ -218,17 +226,16 @@ figure img {
     margin-bottom: 20px;
 }
 
-.external-link {
+.coming-soon {
     background: linear-gradient(var(--dark-orange),var(--light-orange));
     margin: 10px;
-    text-align: center;
-    color: var(var(--black));
-    font-style: italic;
 }
 
-.external-link p {
+.coming-soon p {
     padding: 40px;
-    margin-left: 0;
+    font-size: 150%;
+    margin: 0;
+    text-align: center;
 }
 
 .contact {
@@ -237,15 +244,35 @@ figure img {
     align-items: center;
 }
 
-#last-hr {
+.center-hr {
     margin-left: 32vw;
     margin-right: 32vw;
 }
 
 .contact a {
+    color: var(--black);
+    background-color: var(--dark-orange);
     text-decoration: none;
-    color: white;
-    border: 
+    font-family: var(--font-main);
+    font-weight: 700;
+    font-size: 100%;
+    width: 150px;
+    padding: 15px;
+    margin: 30px;
+    text-align: center;
+}
+
+#links-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+footer {
+    font-size: 70%;
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
 }
 
 https://github.com/hayleyarodgers/usyd-bootcamp-challenge-week1
