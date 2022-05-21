@@ -83,7 +83,7 @@ nav {
    color: var(--black);
    font-family: var(--font-main);
    font-weight: 700;
-   font-size: 150%;
+   font-size: 125%;
    width: 50%;
    float: right;
    position: relative;
@@ -104,33 +104,18 @@ nav a {
     color: var(--black);
 }
 
-.dot {
-    background-color: var(--blue);
-    height: 28px;
-    width: 28px;
-    border-radius: 50%;
-    margin: 7px;
-}
-
-.dot-group {
-    display: flex;
-    position: relative;
-    top: 15px;
-    left: 370px;
-}
-
 main {
     margin-left: 10vw;
     margin-right: 10vw;
 }
 
-.hero {
-    margin-top: 80px;
+#hero {
+    margin-top: 120px;
     display: flex;
     align-items: center;
 }
 
-.hero p {
+#hero p {
     max-width: 70%;
     margin-top: 40px;
 }
@@ -142,9 +127,8 @@ figure img {
     box-shadow: 15px 10px 15px var(--dark-orange);
 }
 
-.about {
+#about-content {
     display: flex;
-    align-items: center; 
 }
 
 .pop-box {
@@ -155,11 +139,12 @@ figure img {
     font-size: 140%;
     font-weight: 200;
     color: var(--black);
+    text-align: center;
     line-height: 1.5;
     margin-bottom: 40px;
 }
 
-.about ul {
+#about ul {
     list-style: inside;
     margin-left: 20px;
     margin-bottom: 40px;
@@ -197,7 +182,7 @@ figure img {
     top: -135px;
 }
 
-.work h4, .work p {
+#work h4, #work p {
     margin-left: 20px;
 }
 
@@ -238,7 +223,7 @@ figure img {
     text-align: center;
 }
 
-.contact {
+#contact {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -249,7 +234,7 @@ figure img {
     margin-right: 32vw;
 }
 
-.contact a {
+#contact a {
     color: var(--black);
     background-color: var(--dark-orange);
     text-decoration: none;
@@ -274,5 +259,28 @@ footer {
     margin-top: 20px;
     padding: 10px;
 }
+
+.contact-bar {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    line-height: 0;
+}
+
+.contact-bar a {
+    background: var(--blue);
+    margin: 10px;
+    border-radius: 50%;
+    border: 10px solid var(--blue);
+}
+
+.contact-bar img {
+    height: 40px;
+    width: 40px;
+}
+
+
 
 https://github.com/hayleyarodgers/usyd-bootcamp-challenge-week1
