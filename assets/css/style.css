@@ -7,34 +7,37 @@
     6. =CONTACT
     7. =CONTACT-BAR
     8. =FOOTER
+    9. =VIEWPORT-RESPONSES
 */
 
 /* ===GLOBAL=== */
 
 /* Set font and color scheme. */
 :root {
---font-main: 'Montserrat', sans-serif;
---font-code: 'Inconsolata', monospace;
---black: #021C1D;
---dark-orange: #FA8130;
---light-orange: #FAAE08;
---blue: #2aefcb;;
---white: #FDF1E1;
+    font-size: 62.5%;
+    --font-main: 'Montserrat', sans-serif;
+    --font-code: 'Inconsolata', monospace;
+    --black: #021C1D;
+    --dark-orange: #FA8130;
+    --light-orange: #FAAE08;
+    --blue: #2aefcb;;
+    --white: #FDF1E1;
 }
 
 body {
     background-color: var(--black);
     color: var(--white);
-    font-style: var(--font-main);
-    font-size: 140%;
-    font-weight: 200;
+    font-family: var(--font-main);
+    font-weight: 400;
+    font-size: 2rem;
     line-height: 1.5;
 }
 
 h1 {
     color: var(--black);
     font-family: var(--font-main);
-    font-size: 200%;
+    font-weight: 700;
+    font-size: 3rem;
     text-align: left;
     padding: 20px;
 }
@@ -45,50 +48,44 @@ h4,
 h5 {
     color: var(--white);
     font-family: var(--font-main);
-    font-style: 700;
-    margin-top: 40px;
-    margin-bottom: 40px;
+    font-weight: 700;
+    margin: 40px 0;
 }
 
 h2 {
-    font-size: 400%;
+    font-size: 8rem;
 }
 
 h3 {
-    font-size: 280%;
+    font-size: 5rem;
 }
 
 h4 {
-    font-size: 130%;
-}
-
-h5 {
-    font-size: 100%;
+    font-size: 3rem;
+    margin: 20px 0;
 }
 
 .font-code {
-    font-family: var(--font-code);
-    font-size: 160%;
     color: var(--blue);
+    font-family: var(--font-code);
+    font-size: 3rem;
 }
 
 /* Set page margin. */
 main {
-    margin-left: 10vw;
-    margin-right: 10vw;
+    margin: 0 10vw;
 }
 
 /* Define section divider appearance. */
 hr {
     border: 1px solid var(--blue);
-    width: 16vw;
-    margin-top: 40px;
-    margin-bottom: 40px;
+    width: 300px;
+    margin: 40px 0;
 }
 
 .center-hr {
-    margin-left: 32vw;
-    margin-right: 32vw;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* Set scale to create pulse effect on hover. */
@@ -113,8 +110,8 @@ nav {
    color: var(--black);
    font-family: var(--font-main);
    font-weight: 700;
-   font-size: 125%;
-   width: 50%;
+   font-size: 2.5rem;
+   width: 50vw;
    float: right;
    position: relative;
    margin-top: -20px;
@@ -144,12 +141,11 @@ nav a {
 }
 
 #hero p {
-    max-width: 70%;
     margin-top: 40px;
 }
 
 figure img {
-    width: 450px;
+    width: 33vw;
     margin-left: 80px;
     border-radius: 50%;
     box-shadow: 15px 10px 15px var(--dark-orange);
@@ -158,21 +154,14 @@ figure img {
 /* ===ABOUT=== */
 
 /* Use flex display to create about section with text on the left and skills icons on the right. */
-#about-content {
-    display: flex;
-}
 
 /* Define appearance of text on the left of the about section. */
 .pop-box {
     background-color: var(--blue);
-    padding: 20px;
-    width: 70%;
-    font-style: var(--font-main);
-    font-size: 140%;
-    font-weight: 200;
     color: var(--black);
     text-align: center;
-    line-height: 1.5;
+    padding: 20px;
+    width: 300px;
     margin-bottom: 40px;
 }
 
@@ -186,27 +175,24 @@ figure img {
 .skills {
     display: flex;
     flex-wrap: wrap;
-    max-width: 60%;
+    align-items: flex-start;
 }
 
 .skills-icon {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    max-width: 200px;
 }
 
 .skills-icon img {
-    max-width: 80px; 
-    max-height: 80px;
-    height: auto; 
-    width: auto; 
+    width: 10vw; 
+    height: 10vw;
 }
 
 .skill-icons-background {
     background-color: var(--dark-orange);
-    height: 150px;
-    width: 150px;
+    height: 15vw;
+    width: 15vw;
     border-radius: 50%;
     box-shadow: 10px 10px 10px var(--light-orange);
     margin: 20px;
@@ -231,7 +217,7 @@ figure img {
 .primary-work-card {
     border: 3px solid var(--dark-orange);
     width: 80vw;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 }
 
 .primary-work-card img {
@@ -242,7 +228,7 @@ figure img {
 }
 
 /* Define appearance of secondary applications. */
-.secondary-work {
+#secondary-work {
     max-width: 80vw;
     display: flex;
     justify-content: space-between;
@@ -261,7 +247,7 @@ figure img {
 
 .coming-soon p {
     padding: 40px;
-    font-size: 150%;
+    font-size: 4rem;
     text-align: center;
 }
 
@@ -287,7 +273,6 @@ figure img {
     text-decoration: none;
     font-family: var(--font-main);
     font-weight: 700;
-    font-size: 100%;
     width: 150px;
     padding: 15px;
     margin: 30px;
@@ -304,7 +289,7 @@ figure img {
 /* ===CONTACT-BAR=== */
 
 /* Define appearance of icons in contact bar and set to bottom-right of screen. */
-.contact-bar {
+#contact-bar {
     display: flex;
     flex-direction: column;
     position: fixed;
@@ -313,14 +298,14 @@ figure img {
     line-height: 0;
 }
 
-.contact-bar a {
+#contact-bar a {
     background: var(--blue);
     margin: 10px;
     border-radius: 50%;
     border: 10px solid var(--blue);
 }
 
-.contact-bar img {
+#contact-bar img {
     height: 40px;
     width: 40px;
 }
@@ -329,13 +314,105 @@ figure img {
 
 /* Define appearance of footer. */
 footer {
-    font-size: 70%;
+    font-size: 1.5rem;
     text-align: center;
     margin-top: 20px;
-    padding: 10px;
 }
 
 footer h5 {
     margin-top: 20px;
     margin-bottom: 10px;
+}
+
+/* ===VIEWPORT-RESPONSES=== */
+
+/* Tablets -  */
+@media screen and (max-width: 992px) {
+    body {
+        background-color: red
+    }
+
+    h2 {
+        font-size: 7rem;
+    }
+
+    #secondary-work {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .secondary-work-card {
+        width: 80vw;
+        margin-bottom: 30px;
+    }
+  }
+  
+/* Large smartphones - CHANGE REM FONT SIZES  */
+@media screen and (max-width: 768px) {
+    body {
+        background-color: purple;
+    }
+
+    h2, h3, h4, p, ul, li, .pop-box {
+        margin: auto;
+        text-align: center;
+    }
+
+    h2 {
+        font-size: 6rem;
+    }
+
+    h3, .pop-box {
+        margin-bottom: 30px;
+    }
+
+    #contact-bar, .skills-icon, .skills-icon img, .skills-icon-background {
+        display: none
+    }
+
+    hr {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    nav {
+        width: 100vw;
+        margin: 0;
+    }
+
+    #hero {
+        flex-direction: column;
+    }
+
+    figure img {
+        margin-left: 0;
+        margin-top: 40px;
+    }
+
+    #contact a {
+        margin: 15px;
+    }
+    
+    #work h4, #work p {
+        margin-left: 0;
+    }
+}
+  
+/* Small smartphones - CHANGE REM FONT SIZES */
+@media screen and (max-width: 576px) {
+    :root {
+        font-size: 50%;
+    }
+    
+    body {
+        background-color: grey;
+    }
+    
+ #about, #about-content, #work, #secondary-work {
+        flex-direction: column;
+    }
+
+    #secondary-work {
+        width: 80vw;
+    }
 }
