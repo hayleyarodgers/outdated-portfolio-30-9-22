@@ -109,6 +109,35 @@ main {
     margin-right: 10vw;
 }
 
+.contact-bar {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    line-height: 0;
+}
+
+.contact-bar a {
+    background: var(--blue);
+    margin: 10px;
+    border-radius: 50%;
+    border: 10px solid var(--blue);
+}
+
+.contact-bar img {
+    height: 40px;
+    width: 40px;
+}
+
+.grow { 
+    transition: all .2s ease-in-out; 
+}
+    
+.grow:hover { 
+    transform: scale(1.1); 
+}
+
 #hero {
     margin-top: 120px;
     display: flex;
@@ -186,6 +215,11 @@ figure img {
     margin-left: 20px;
 }
 
+#work a {
+    color: var(--white);
+    text-decoration: none;
+}
+
 .primary-work-card {
     border: 3px solid var(--dark-orange);
     width: 80vw;
@@ -198,6 +232,11 @@ figure img {
     object-fit: cover;
     margin: 10px 0;
 }
+
+.glow:hover {
+    border: 3px solid var(--blue);
+    box-shadow: inset 0px 0px 8px var(--blue), 0 0 15px var(--blue);
+ }
 
 .secondary-work {
     max-width: 80vw;
@@ -219,7 +258,7 @@ figure img {
 .coming-soon p {
     padding: 40px;
     font-size: 150%;
-    margin: 0;
+    margin-left: 0;
     text-align: center;
 }
 
@@ -260,27 +299,5 @@ footer {
     padding: 10px;
 }
 
-.contact-bar {
-    display: flex;
-    flex-direction: column;
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    line-height: 0;
-}
-
-.contact-bar a {
-    background: var(--blue);
-    margin: 10px;
-    border-radius: 50%;
-    border: 10px solid var(--blue);
-}
-
-.contact-bar img {
-    height: 40px;
-    width: 40px;
-}
 
 
-
-https://github.com/hayleyarodgers/usyd-bootcamp-challenge-week1
