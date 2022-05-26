@@ -1,4 +1,4 @@
-# usyd-bootcamp-challenge-week2
+# hayleyrodgers-professional-portfolio
 
 Credits
 

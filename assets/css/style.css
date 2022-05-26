@@ -153,9 +153,22 @@ figure img {
 
 /* ===ABOUT=== */
 
-/* Use flex display to create about section with text on the left and skills icons on the right. */
+/* Use flex to create about section with text on the left and icons on the right. */
 
-/* Define appearance of text on the left of the about section. */
+#about-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Define appearance of about text. */
+#about-text {
+    display: flex;
+    flex-direction: column;
+    width: 40vw;
+    margin-right: 5vw;
+}
+
 .pop-box {
     background-color: var(--blue);
     color: var(--black);
@@ -165,40 +178,27 @@ figure img {
     margin-bottom: 40px;
 }
 
-#about ul {
-    list-style: inside;
-    margin-left: 20px;
+#about-text ul {
+    list-style: outside;
+    margin-left: 40px;
     margin-bottom: 40px;
 }
 
-/* Define appearance of skills icons on the right of the about section. */
-.skills {
+/* Define appearance of about icons. */
+#about-icons {
     display: flex;
     flex-wrap: wrap;
-    align-items: flex-start;
+    width: 40vw;
+    margin: 0 5vw;
 }
 
-.skills-icon {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-}
-
-.skills-icon img {
-    width: 10vw; 
-    height: 10vw;
-}
-
-.skill-icons-background {
+#about-icons img {
+    width: 120px; 
+    height: 120px;
     background-color: var(--dark-orange);
-    height: 15vw;
-    width: 15vw;
-    border-radius: 50%;
-    box-shadow: 10px 10px 10px var(--light-orange);
-    margin: 20px;
-    z-index: -1;
-    position: relative;
-    top: -135px;
+    border: 10px solid var(--dark-orange);
+    padding: 15px;
+    margin: 15px;
 }
 
 /* ===WORK=== */
@@ -240,12 +240,12 @@ figure img {
     margin-bottom: 20px;
 }
 
-.coming-soon {
+.placeholder {
     background: linear-gradient(var(--dark-orange),var(--light-orange));
     margin: 10px;
 }
 
-.coming-soon p {
+.placeholder p {
     padding: 40px;
     font-size: 4rem;
     text-align: center;
@@ -326,14 +326,20 @@ footer h5 {
 
 /* ===VIEWPORT-RESPONSES=== */
 
-/* Tablets -  */
+/* Tablets - Remove about icons, adjust text size, adjust secondary work tiles to fill whole width of screen instead of a third. */
 @media screen and (max-width: 992px) {
-    body {
-        background-color: red
-    }
-
     h2 {
         font-size: 7rem;
+    }
+
+    #about-icons img {
+        display: none;
+    }
+
+    #about-flex, #about-text {
+        display: inline;
+        width: auto;
+        margin-right: 0;
     }
 
     #secondary-work {
@@ -347,10 +353,10 @@ footer h5 {
     }
   }
   
-/* Large smartphones - CHANGE REM FONT SIZES  */
+/* Large smartphones -  Remove contact bar and center everything. */
 @media screen and (max-width: 768px) {
-    body {
-        background-color: purple;
+    #contact-bar {
+        display: none;
     }
 
     h2, h3, h4, p, ul, li, .pop-box {
@@ -364,10 +370,6 @@ footer h5 {
 
     h3, .pop-box {
         margin-bottom: 30px;
-    }
-
-    #contact-bar, .skills-icon, .skills-icon img, .skills-icon-background {
-        display: none
     }
 
     hr {
@@ -398,21 +400,9 @@ footer h5 {
     }
 }
   
-/* Small smartphones - CHANGE REM FONT SIZES */
+/* Small smartphones - Reduce size of all text. */
 @media screen and (max-width: 576px) {
     :root {
         font-size: 50%;
-    }
-    
-    body {
-        background-color: grey;
-    }
-    
- #about, #about-content, #work, #secondary-work {
-        flex-direction: column;
-    }
-
-    #secondary-work {
-        width: 80vw;
     }
 }
