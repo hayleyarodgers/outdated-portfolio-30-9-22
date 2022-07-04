@@ -232,12 +232,21 @@ figure img {
     max-width: 80vw;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .secondary-work-card {
     border: 3px solid var(--dark-orange);
-    width: 25vw;
+    width: 39vw;
+    height: 40vh;
     margin-bottom: 20px;
+}
+
+.secondary-work-card img {
+    height: 100px;
+    width: 100%;
+    object-fit: cover;
+    margin: 10px 0;
 }
 
 .placeholder {
